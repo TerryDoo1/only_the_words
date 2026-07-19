@@ -5,12 +5,13 @@ def get_words(string):
     # a space marks the end of a word
     for i in string:
         if i == " ":
-            words.append(temp)
+            if temp != " " and temp != "":
+                words.append(temp)
             temp = ""
         else:
             temp += i
     #adds last word as the loop ends without a space
-    if temp != " ":
+    if temp != " " and temp != "":
         words.append(temp)
     
     return words
